@@ -6,65 +6,41 @@ using System.Reflection;
 using System.Linq;
 using System.Collections;
 
+using static Variables;
+
 public static class RaiseCalculator
 {
-    private static int skillLvl;
-    private static bool plusOne;
-    private static bool explosion;
-
     private static readonly List<int> dicesRolled = new();
     private static readonly List<int> firstHalfRolled = new();
     private static readonly List<int> secondHalfRolled = new();
 
-    private static int nbTotalDices = 0;
-    private static int nbDramaticWounds;
-
     private static int nbRaises = 0;
-
-    public static void SetDatas(int nbTraitDices, int skillLvl, bool plusOne, int nbDramaticWounds, int nbBonusDice, bool explosion)
-    {
-        nbTotalDices = nbTraitDices + skillLvl + nbBonusDice;
-        RaiseCalculator.skillLvl = skillLvl;
-        RaiseCalculator.nbDramaticWounds = nbDramaticWounds;
-        RaiseCalculator.plusOne = plusOne;
-        RaiseCalculator.explosion = explosion;
-
-        Debug.Log("NB OF DICES TO LAUNCH : " + nbTraitDices + "+" + skillLvl + "+" + nbBonusDice + " : " + nbTotalDices);
-        Debug.Log("NB DRAMATIC WOUNDS : " + nbDramaticWounds);
-        Debug.Log("PLUS ONE ? " + plusOne);
-        Debug.Log("EXPLOSION ? " + explosion);
-    }
 
     public static void DisplayRaises()
     {
-        GameObject.Find("Raises").transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = nbRaises.ToString();
-        GameObject.Find("Raises").transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = LookDices(dicesRolled);
+        GameObject.Find("Canvas/Raises").transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = nbRaises.ToString();
+        GameObject.Find("Canvas/Raises").transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = LookDices(dicesRolled);
+        GameObject.Find("Canvas/Raises").transform.GetChild(5).GetComponent<TextMeshProUGUI>().text = nbExplosions.ToString();
+        ExplosionsTracker.instance.SetExplosionTracker();
     }
-    /*
-    public static void ClearLog()
+
+    public static void Roll()
     {
-        var assembly = Assembly.GetAssembly(typeof(UnityEditor.Editor));
-        var type = assembly.GetType("UnityEditor.LogEntries");
-        var method = type.GetMethod("Clear");
-        method.Invoke(new object(), null);
-    }
-    */
-    public static void LaunchDices()
-    {
-        //ClearLog();
         dicesRolled.Clear();
         firstHalfRolled.Clear();
         secondHalfRolled.Clear();
         nbRaises = 0;
-        for (int i = 0; i < nbTotalDices; i++)
+        nbExplosions = 0;
+        for (int i = 0; i < (traitLvl + skillLvl + bonusDices); i++)
         {
             int die = UnityEngine.Random.Range(1, 11);
-            dicesRolled.Add(die);
             while (die == 10 && explosion)
             {
+                Debug.Log("EXPLOSION");
+                nbExplosions++;
                 die = UnityEngine.Random.Range(1, 11);
-                dicesRolled.Add(die);
             }
+            dicesRolled.Add(die);
         }
         if (skillLvl >= 3)
         {
@@ -72,8 +48,9 @@ public static class RaiseCalculator
             dicesRolled[dicesRolled.IndexOf(dicesRolled.Min())] = die;
             while (die == 10 && explosion)
             {
+                Debug.Log("EXPLOSION");
+                nbExplosions++;
                 die = UnityEngine.Random.Range(1, 11);
-                dicesRolled.Add(die);
             }
         }
         if (plusOne)
@@ -86,6 +63,11 @@ public static class RaiseCalculator
                 }
             }
         }
+        for (int i = 0; i < nbExplosions; i++)
+        {
+            dicesRolled.Add(10);
+        }
+        DiceTaker.instance.RotateDices(dicesRolled);
         Debug.Log("HERE'S THE DICES USED : " + LookDices(dicesRolled));
         Debug.Log("THINK ABOUT +5 MALUS IN CASE OF DANGER");
         Calculation();

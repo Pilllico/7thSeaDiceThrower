@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static Variables;
 
 public class ButtonManager : MonoBehaviour
 {
     public static ButtonManager instance;
-    public Toggle explosion;
-    public Toggle plusOne;
+    public Toggle plusOneToggle;
+    public Toggle explosionToggle;
     [HideInInspector] public bool explosionLockedBySkills = false;
     [HideInInspector] public bool explosionLockedByWounds = false;
     [HideInInspector] public bool explosionLockedByButton = false;
@@ -38,18 +39,18 @@ public class ButtonManager : MonoBehaviour
 
     public void ButtonExplosion()
     {
-        LockedByButton(explosion.isOn);
+        LockedByButton(explosionToggle.isOn);
     }
 
     public void ButtonPlusOne()
     {
-        DiceLauncher.instance.plusOne = plusOne.isOn;
+        plusOne = plusOneToggle.isOn;
     }
 
     public void SetExplosionStatus()
     {
         bool explosionIsOn = explosionLockedBySkills || explosionLockedByWounds || explosionLockedByButton;
-        explosion.SetIsOnWithoutNotify(explosionIsOn);
-        DiceLauncher.instance.explosion = explosionIsOn;
+        explosionToggle.SetIsOnWithoutNotify(explosionIsOn);
+        explosion = explosionIsOn;
     }
 }

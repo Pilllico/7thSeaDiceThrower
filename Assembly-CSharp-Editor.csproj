@@ -108,7 +108,6 @@
     <Compile Include="Assets\TheraBytes\BetterUI\Editor\Scripts\ResolutionSizer\SizeModifierDrawer\ScreenDependentSizeModifierDrawer.cs" />
     <Compile Include="Assets\TheraBytes\BetterUI\Editor\Scripts\Wizard\Pages\AssemblyDefinitionsPage.cs" />
     <Compile Include="Assets\TheraBytes\BetterUI\Editor\Scripts\UiLayout\BetterAxisAlignedLayoutGroupEditor.cs" />
-    <Compile Include="Assets\Editor\RenameDrawer.cs" />
     <Compile Include="Assets\TheraBytes\BetterUI\Editor\Scripts\Wizard\Pages\ExampleScenesPage.cs" />
     <Compile Include="Assets\TheraBytes\BetterUI\Editor\Scripts\Wizard\SetupWizard.cs" />
     <Compile Include="Assets\TheraBytes\BetterUI\Editor\Scripts\ThirdParty\ReorderableList\ReorderableListFlags.cs" />

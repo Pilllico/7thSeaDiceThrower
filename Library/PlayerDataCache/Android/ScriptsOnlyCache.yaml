@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - ButtonManager
     - DiceLauncher
     - DiceTaker
+    - ExplosionsTracker
     - RandomRotation
     - TheraBytes.BetterUi.ResolutionMonitor
     DOTween.dll:
@@ -150,6 +151,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ButtonFunctions
     methodName: RemoveABonusDice
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonManager
+    methodName: ButtonPlusOne
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -222,6 +226,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4806}
     - Class: 114
       Script: {instanceID: 5142}
+    - Class: 114
+      Script: {instanceID: 87814}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -229,6 +235,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -327,7 +337,7 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: da161b05edf351f4eb49eb36990b486a
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DiceLauncher
@@ -489,7 +499,7 @@ ScriptsOnlyBuild:
     className: InteractionArea
   - hash:
       serializedVersion: 2
-      Hash: fafa6986c110fa7b778d3417d7f64d9f
+      Hash: 6c9754ea95b1f57aa43b135b0bf4cf4a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ButtonManager
@@ -979,6 +989,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 1982e99bae86b295b5a9c6b0f80e7fc8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ExplosionsTracker
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

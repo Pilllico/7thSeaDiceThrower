@@ -15,6 +15,8 @@
 -s="E:\Jeux\Unity\Projet\7thSeaDiceThrower\Library\PlayerScriptAssemblies"
 -s="E:\Jeux\Unity\Projet\7thSeaDiceThrower\Assets\Plugins\Demigiant\DOTween"
 -s="E:\Jeux\Unity\Projet\7thSeaDiceThrower\Library\PackageCache\com.unity.ext.nunit@2.0.3\net40\unity-custom"
+-s="E:\Jeux\Unity\Projet\7thSeaDiceThrower\Packages\com.unity.burst"
+-s="E:\Jeux\Unity\Projet\7thSeaDiceThrower\Packages\com.unity.burst\Unity.Burst.CodeGen"
 -s="E:\Logiciel\Unity\2021.3.19f1\Editor\Data\Managed\UnityEngine"
 -s="E:\Logiciel\Unity\2021.3.19f1\Editor\Data\NetStandard\ref\2.1.0"
 -s="E:\Logiciel\Unity\2021.3.19f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard"

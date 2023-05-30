@@ -355,7 +355,6 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Editor/RenameDrawer.cs"
 "Assets/TheraBytes/BetterUI/Editor/Scripts/Helpers/BetterElementHelper.cs"
 "Assets/TheraBytes/BetterUI/Editor/Scripts/Helpers/Betterizer.cs"
 "Assets/TheraBytes/BetterUI/Editor/Scripts/Helpers/EditorGuiUtils.cs"
