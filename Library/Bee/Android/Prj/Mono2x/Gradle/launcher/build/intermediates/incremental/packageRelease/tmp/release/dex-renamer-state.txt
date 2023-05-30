@@ -1,0 +1,4 @@
+#Tue May 30 20:03:41 CEST 2023
+base.0=E\:\\Jeux\\Unity\\Projet\\7th Sea Dice Thrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
