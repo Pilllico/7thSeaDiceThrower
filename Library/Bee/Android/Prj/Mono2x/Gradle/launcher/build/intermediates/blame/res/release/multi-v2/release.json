@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Jeux\\Unity\\Projet\\7th Sea Dice Thrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\res\\merged\\release\\values-v30_values-v30.arsc.flat",
+            "outputFile": "E:\\Jeux\\Unity\\Projet\\7thSeaDiceThrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\res\\merged\\release\\values-v30_values-v30.arsc.flat",
             "map": [
                 {
-                    "source": "E:\\Jeux\\Unity\\Projet\\7th Sea Dice Thrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\unityLibrary\\build\\intermediates\\packaged_res\\release\\values-v30\\values-v30.xml",
+                    "source": "E:\\Jeux\\Unity\\Projet\\7thSeaDiceThrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\unityLibrary\\build\\intermediates\\packaged_res\\release\\values-v30\\values-v30.xml",
                     "from": {
                         "startLines": "2,3,4,5,6",
                         "startColumns": "4,4,4,4,4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "E:\\Jeux\\Unity\\Projet\\7th Sea Dice Thrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\res\\merged\\release\\values-v21_values-v21.arsc.flat",
+            "outputFile": "E:\\Jeux\\Unity\\Projet\\7thSeaDiceThrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\res\\merged\\release\\values-v21_values-v21.arsc.flat",
             "map": [
                 {
-                    "source": "E:\\Jeux\\Unity\\Projet\\7th Sea Dice Thrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\src\\main\\res\\values-v21\\styles.xml",
+                    "source": "E:\\Jeux\\Unity\\Projet\\7thSeaDiceThrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\src\\main\\res\\values-v21\\styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "0",
@@ -40,10 +40,10 @@
             ]
         },
         {
-            "outputFile": "E:\\Jeux\\Unity\\Projet\\7th Sea Dice Thrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\res\\merged\\release\\values_values.arsc.flat",
+            "outputFile": "E:\\Jeux\\Unity\\Projet\\7thSeaDiceThrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\res\\merged\\release\\values_values.arsc.flat",
             "map": [
                 {
-                    "source": "E:\\Jeux\\Unity\\Projet\\7th Sea Dice Thrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\unityLibrary\\build\\intermediates\\packaged_res\\release\\values\\values.xml",
+                    "source": "E:\\Jeux\\Unity\\Projet\\7thSeaDiceThrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\unityLibrary\\build\\intermediates\\packaged_res\\release\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",
@@ -53,7 +53,7 @@
                     }
                 },
                 {
-                    "source": "E:\\Jeux\\Unity\\Projet\\7th Sea Dice Thrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\src\\main\\res\\values\\styles.xml",
+                    "source": "E:\\Jeux\\Unity\\Projet\\7thSeaDiceThrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "5,2,7",
                         "startColumns": "0,0,0",
@@ -72,7 +72,7 @@
                     }
                 },
                 {
-                    "source": "E:\\Jeux\\Unity\\Projet\\7th Sea Dice Thrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\src\\main\\res\\values\\strings.xml",
+                    "source": "E:\\Jeux\\Unity\\Projet\\7thSeaDiceThrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "2,2",
@@ -91,10 +91,10 @@
             ]
         },
         {
-            "outputFile": "E:\\Jeux\\Unity\\Projet\\7th Sea Dice Thrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\res\\merged\\release\\values-v28_values-v28.arsc.flat",
+            "outputFile": "E:\\Jeux\\Unity\\Projet\\7thSeaDiceThrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\res\\merged\\release\\values-v28_values-v28.arsc.flat",
             "map": [
                 {
-                    "source": "E:\\Jeux\\Unity\\Projet\\7th Sea Dice Thrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\src\\main\\res\\values-v28\\styles.xml",
+                    "source": "E:\\Jeux\\Unity\\Projet\\7thSeaDiceThrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\src\\main\\res\\values-v28\\styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "0",

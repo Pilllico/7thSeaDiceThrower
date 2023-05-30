@@ -43,18 +43,16 @@ public class DiceTaker : MonoBehaviour
     public void CatchDices(int newTraits, int newSkills, int newBonus)
     {
         for (int i = 0; i < traitDices.Count; i++)
-            traitDices[i].DOScale(i < newTraits ? 0.125f : 0f, 0.75f).SetEase(i < newTraits ? Ease.OutBack : Ease.InBack);
+            traitDices[i].DOScale(i < newTraits ? 0.125f : 0f, 0.5f).SetEase(i < newTraits ? Ease.OutBack : Ease.InBack);
         for (int i = 0; i < skillDices.Count; i++)
-            skillDices[i].DOScale(i < newSkills ? 0.125f : 0f, 0.75f).SetEase(i < newSkills ? Ease.OutBack : Ease.InBack);
+            skillDices[i].DOScale(i < newSkills ? 0.125f : 0f, 0.5f).SetEase(i < newSkills ? Ease.OutBack : Ease.InBack);
         for (int i = 0; i < bonusDicesRow1.Count; i++)
-            bonusDicesRow1[i].DOScale(i < newBonus ? 0.125f : 0f, 0.75f).SetEase(i < newBonus ? Ease.OutBack : Ease.InBack);
+            bonusDicesRow1[i].DOScale(i < newBonus ? 0.125f : 0f, 0.5f).SetEase(i < newBonus ? Ease.OutBack : Ease.InBack);
         for (int i = 0; i < bonusDicesRow2.Count; i++)
-            bonusDicesRow2[i].DOScale(i + 5 < newBonus ? 0.125f : 0f, 0.75f).SetEase(i + 5 < newBonus ? Ease.OutBack : Ease.InBack);
+            bonusDicesRow2[i].DOScale(i + 5 < newBonus ? 0.125f : 0f, 0.5f).SetEase(i + 5 < newBonus ? Ease.OutBack : Ease.InBack);
 
         traits = newTraits;
         skills = newSkills;
         bonus = newBonus;
-
-        Debug.Log("PATATE");
     }
 }

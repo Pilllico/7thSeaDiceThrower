@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Jeux\\Unity\\Projet\\7th Sea Dice Thrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
+            "outputFile": "E:\\Jeux\\Unity\\Projet\\7thSeaDiceThrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
-                    "source": "E:\\Jeux\\Unity\\Projet\\7th Sea Dice Thrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\unityLibrary\\build\\intermediates\\packaged_res\\release\\values\\values.xml",
+                    "source": "E:\\Jeux\\Unity\\Projet\\7thSeaDiceThrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\unityLibrary\\build\\intermediates\\packaged_res\\release\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "E:\\Jeux\\Unity\\Projet\\7th Sea Dice Thrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\src\\main\\res\\values\\styles.xml",
+                    "source": "E:\\Jeux\\Unity\\Projet\\7thSeaDiceThrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "5,2,7",
                         "startColumns": "0,0,0",
@@ -33,7 +33,7 @@
                     }
                 },
                 {
-                    "source": "E:\\Jeux\\Unity\\Projet\\7th Sea Dice Thrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\src\\main\\res\\values\\strings.xml",
+                    "source": "E:\\Jeux\\Unity\\Projet\\7thSeaDiceThrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "2,2",

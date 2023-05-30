@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Jeux\\Unity\\Projet\\7th Sea Dice Thrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v21\\values-v21.xml",
+            "outputFile": "E:\\Jeux\\Unity\\Projet\\7thSeaDiceThrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
-                    "source": "E:\\Jeux\\Unity\\Projet\\7th Sea Dice Thrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\src\\main\\res\\values-v21\\styles.xml",
+                    "source": "E:\\Jeux\\Unity\\Projet\\7thSeaDiceThrower\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\src\\main\\res\\values-v21\\styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "0",

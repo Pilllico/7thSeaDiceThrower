@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "4cd1ca9b",
         "name": "com.PixelCatStudio.SeventhSeaDiceThrower",
-        "processId": 1973,
+        "processId": 8820,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -42,6 +42,30 @@
             "deviceId": "4cd1ca9b",
             "name": "com.PixelCatStudio.SeventhSeaDiceThrower",
             "processId": 1973,
+            "exited": false
+        },
+        {
+            "deviceId": "4cd1ca9b",
+            "name": "com.PixelCatStudio.SeventhSeaDiceThrower",
+            "processId": 2805,
+            "exited": false
+        },
+        {
+            "deviceId": "4cd1ca9b",
+            "name": "com.PixelCatStudio.SeventhSeaDiceThrower",
+            "processId": 3831,
+            "exited": false
+        },
+        {
+            "deviceId": "4cd1ca9b",
+            "name": "com.PixelCatStudio.SeventhSeaDiceThrower",
+            "processId": 5050,
+            "exited": false
+        },
+        {
+            "deviceId": "4cd1ca9b",
+            "name": "com.PixelCatStudio.SeventhSeaDiceThrower",
+            "processId": 8820,
             "exited": false
         }
     ],
