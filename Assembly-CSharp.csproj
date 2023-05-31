@@ -80,6 +80,7 @@
     <Compile Include="Assets\TheraBytes\BetterUI\Runtime\Scripts\BetterUiElements\Transitions\MaterialPropertyTransition.cs" />
     <Compile Include="Assets\TheraBytes\BetterUI\Runtime\Scripts\BetterUiElements\ValueDragger.cs" />
     <Compile Include="Assets\TheraBytes\BetterUI\Runtime\Scripts\BetterUiLayout\SizeModifiers\SizeConfigCollection.cs" />
+    <Compile Include="Assets\Scripts\Variables.cs" />
     <Compile Include="Assets\TheraBytes\BetterUI\Runtime\Scripts\BetterUiLayout\OverrideScreenProperties.cs" />
     <Compile Include="Assets\TheraBytes\BetterUI\Runtime\Scripts\BetterUiElements\InteractionArea.cs" />
     <Compile Include="Assets\TheraBytes\BetterUI\Runtime\Scripts\Utils\VertexMaterialData.cs" />
@@ -113,6 +114,7 @@
     <Compile Include="Assets\TheraBytes\BetterUI\Runtime\Scripts\Utils\DpiManager.cs" />
     <Compile Include="Assets\TheraBytes\BetterUI\Runtime\Scripts\BetterUiLayout\SizeDeltaSizer.cs" />
     <Compile Include="Assets\TheraBytes\BetterUI\Runtime\Scripts\Utils\ScreenType\IIsActive.cs" />
+    <Compile Include="Assets\Scripts\ExplosionsTracker.cs" />
     <Compile Include="Assets\TheraBytes\BetterUI\Runtime\Scripts\BetterUiLayout\Margin.cs" />
     <Compile Include="Assets\TheraBytes\BetterUI_TextMeshPro\Runtime\BetterTextMeshProUGUI.cs" />
     <Compile Include="Assets\TheraBytes\BetterUI\Runtime\Scripts\Utils\ScreenType\IsCertainScreenOrientation.cs" />
@@ -145,8 +147,6 @@
     <Compile Include="Assets\TheraBytes\BetterUI\Runtime\Scripts\BetterUiElements\Transitions\AnimationTransitions.cs" />
     <Compile Include="Assets\TheraBytes\BetterUI\Runtime\Scripts\BetterUiElements\Transitions\CustomTransition.cs" />
     <Compile Include="Assets\TheraBytes\BetterUI\Runtime\Scripts\BetterUiLayout\SizeModifiers\MarginSizeModifier.cs" />
-    <Compile Include="Assets\Scripts\Variables.cs" />
-    <Compile Include="Assets\Scripts\ExplosionsTracker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TheraBytes\BetterUI\Runtime\Resources\Materials\HueSaturationBrightness.shader" />

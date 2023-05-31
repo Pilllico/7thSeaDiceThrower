@@ -169,7 +169,6 @@ public static class RaiseCalculator
 
     static readonly int limit = 100000;
 
-
     private static bool GetCombo(out List<int> combo, List<int> dicesList, int setSize, int raiseValue)
     {
         int countOfOperations = 0;
