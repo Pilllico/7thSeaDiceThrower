@@ -3,29 +3,11 @@
     "m_SelectedPackage": {
         "deviceId": "4cd1ca9b",
         "name": "com.PixelCatStudio.SeventhSeaDiceThrower",
-        "processId": 21418,
+        "processId": 16301,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "4cd1ca9b",
-            "name": "com.PixelCatStudio.SeventhSeaDiceThrower",
-            "processId": 8820,
-            "exited": true
-        },
-        {
-            "deviceId": "4cd1ca9b",
-            "name": "com.PixelCatStudio.SeventhSeaDiceThrower",
-            "processId": 11675,
-            "exited": true
-        },
-        {
-            "deviceId": "4cd1ca9b",
-            "name": "com.PixelCatStudio.SeventhSeaDiceThrower",
-            "processId": 12012,
-            "exited": true
-        },
         {
             "deviceId": "4cd1ca9b",
             "name": "com.PixelCatStudio.SeventhSeaDiceThrower",
@@ -36,6 +18,30 @@
             "deviceId": "4cd1ca9b",
             "name": "com.PixelCatStudio.SeventhSeaDiceThrower",
             "processId": 21418,
+            "exited": true
+        },
+        {
+            "deviceId": "4cd1ca9b",
+            "name": "com.PixelCatStudio.SeventhSeaDiceThrower",
+            "processId": 31683,
+            "exited": true
+        },
+        {
+            "deviceId": "4cd1ca9b",
+            "name": "com.PixelCatStudio.SeventhSeaDiceThrower",
+            "processId": 12284,
+            "exited": true
+        },
+        {
+            "deviceId": "4cd1ca9b",
+            "name": "org.telegram.messenger",
+            "processId": 23345,
+            "exited": false
+        },
+        {
+            "deviceId": "4cd1ca9b",
+            "name": "com.PixelCatStudio.SeventhSeaDiceThrower",
+            "processId": 16301,
             "exited": false
         }
     ],

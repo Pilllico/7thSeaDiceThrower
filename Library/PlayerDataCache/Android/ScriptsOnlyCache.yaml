@@ -183,51 +183,51 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1642}
+      Script: {instanceID: 1794}
     - Class: 114
-      Script: {instanceID: 1674}
-    - Class: 114
-      Script: {instanceID: 1764}
-    - Class: 114
-      Script: {instanceID: 1782}
+      Script: {instanceID: 1826}
     - Class: 114
       Script: {instanceID: 1916}
     - Class: 114
-      Script: {instanceID: 1922}
+      Script: {instanceID: 1934}
     - Class: 114
-      Script: {instanceID: 2186}
+      Script: {instanceID: 2068}
     - Class: 114
-      Script: {instanceID: 2278}
+      Script: {instanceID: 2074}
     - Class: 114
-      Script: {instanceID: 2506}
+      Script: {instanceID: 2336}
     - Class: 114
-      Script: {instanceID: 2686}
+      Script: {instanceID: 2428}
     - Class: 114
-      Script: {instanceID: 2824}
+      Script: {instanceID: 2656}
     - Class: 114
-      Script: {instanceID: 2874}
+      Script: {instanceID: 2836}
     - Class: 114
-      Script: {instanceID: 2984}
+      Script: {instanceID: 2974}
     - Class: 114
-      Script: {instanceID: 3066}
+      Script: {instanceID: 3024}
     - Class: 114
-      Script: {instanceID: 3068}
+      Script: {instanceID: 3136}
     - Class: 114
-      Script: {instanceID: 3248}
+      Script: {instanceID: 3218}
     - Class: 114
-      Script: {instanceID: 3320}
+      Script: {instanceID: 3220}
     - Class: 114
-      Script: {instanceID: 3460}
+      Script: {instanceID: 3400}
     - Class: 114
-      Script: {instanceID: 3894}
+      Script: {instanceID: 3472}
     - Class: 114
-      Script: {instanceID: 4786}
+      Script: {instanceID: 3610}
     - Class: 114
-      Script: {instanceID: 4806}
+      Script: {instanceID: 4044}
     - Class: 114
-      Script: {instanceID: 5142}
+      Script: {instanceID: 4352}
     - Class: 114
-      Script: {instanceID: 87814}
+      Script: {instanceID: 4938}
+    - Class: 114
+      Script: {instanceID: 4958}
+    - Class: 114
+      Script: {instanceID: 5294}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -775,6 +775,12 @@ ScriptsOnlyBuild:
     className: EventTrigger
   - hash:
       serializedVersion: 2
+      Hash: 1982e99bae86b295b5a9c6b0f80e7fc8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ExplosionsTracker
+  - hash:
+      serializedVersion: 2
       Hash: a81d4c2c1cf3ad164d277d927a193679
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -989,12 +995,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: 1982e99bae86b295b5a9c6b0f80e7fc8
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ExplosionsTracker
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

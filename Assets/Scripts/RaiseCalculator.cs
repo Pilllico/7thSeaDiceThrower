@@ -11,9 +11,6 @@ using static Variables;
 public static class RaiseCalculator
 {
     private static readonly List<int> dicesRolled = new();
-    private static readonly List<int> firstHalfRolled = new();
-    private static readonly List<int> secondHalfRolled = new();
-
     private static int nbRaises = 0;
 
     public static void DisplayRaises()
@@ -27,8 +24,7 @@ public static class RaiseCalculator
     public static void Roll()
     {
         dicesRolled.Clear();
-        firstHalfRolled.Clear();
-        secondHalfRolled.Clear();
+        //Debug.Log(" ================================================ BEGINNING ");
         nbRaises = 0;
         nbExplosions = 0;
         for (int i = 0; i < (traitLvl + skillLvl + bonusDices); i++)
@@ -36,7 +32,7 @@ public static class RaiseCalculator
             int die = UnityEngine.Random.Range(1, 11);
             while (die == 10 && explosion)
             {
-                Debug.Log("EXPLOSION");
+                //Debug.Log("EXPLOSION BY NATURAL 10");
                 nbExplosions++;
                 die = UnityEngine.Random.Range(1, 11);
             }
@@ -44,14 +40,15 @@ public static class RaiseCalculator
         }
         if (skillLvl >= 3)
         {
+            dicesRolled.Remove(dicesRolled.Min());
             int die = UnityEngine.Random.Range(1, 11);
-            dicesRolled[dicesRolled.IndexOf(dicesRolled.Min())] = die;
             while (die == 10 && explosion)
             {
-                Debug.Log("EXPLOSION");
+                //Debug.Log("EXPLOSION BY REROLL");
                 nbExplosions++;
                 die = UnityEngine.Random.Range(1, 11);
             }
+            dicesRolled.Add(die);
         }
         if (plusOne)
         {
@@ -68,170 +65,108 @@ public static class RaiseCalculator
             dicesRolled.Add(10);
         }
         DiceTaker.instance.RotateDices(dicesRolled);
-        Debug.Log("HERE'S THE DICES USED : " + LookDices(dicesRolled));
+        /*
+        Debug.Log(" ================================================ ");
+        Debug.Log("HERE'S THE DICES TO USE : " + LookDices(dicesRolled));
         Debug.Log("THINK ABOUT +5 MALUS IN CASE OF DANGER");
+        Debug.Log(" ================================================ ");
+        */
         Calculation();
     }
 
     private static void Calculation()
     {
-        SeparateIntoHalf();
         int raiseInitialValue = skillLvl >= 4 ? 15 : 10;
-        bool preCalcul = true;
         while (raiseInitialValue >= 10)
         {
-            int nbDicesUsedForRaises = raiseInitialValue == 15 ? 2 : 1;
+            List<int> temp = new();
             while (dicesRolled.Sum() >= raiseInitialValue)
             {
-                bool raiseFound = false;
-                for (int raiseValue = raiseInitialValue; raiseValue < 2 * raiseInitialValue; raiseValue++)
+                int maxDice = dicesRolled.Max();
+                dicesRolled.Remove(maxDice);
+
+                int idealDice = raiseInitialValue - maxDice;
+                //Debug.Log("MAX IS " + maxDice + " SHOULD SEARCH FOR " + idealDice + " WHICH EXISTS ? " + dicesRolled.Contains(idealDice));
+
+                if (idealDice == 0)
                 {
-                    if (preCalcul)
-                    {
-                        bool C1 = GetCombo(out var firstHalfCombo, firstHalfRolled, nbDicesUsedForRaises, raiseValue);
-                        if (C1)
-                        {
-                            raiseFound = true;
-                            foreach (var die in firstHalfCombo)
-                            {
-                                firstHalfRolled.RemoveAt(firstHalfRolled.IndexOf(die));
-                            }
-                            nbRaises += raiseInitialValue == 15 ? 2 : 1;
-                        }
-
-                        bool C2 = GetCombo(out var secondHalfCombo, secondHalfRolled, nbDicesUsedForRaises, raiseValue);
-                        if (C2)
-                        {
-                            raiseFound = true;
-                            foreach (var die in secondHalfCombo)
-                            {
-                                secondHalfRolled.RemoveAt(secondHalfRolled.IndexOf(die));
-                            }
-                            nbRaises += raiseInitialValue == 15 ? 2 : 1;
-                        }
-
-                        MergeIntoOne();
-                        preCalcul = false;
-                    }
-                    if (!preCalcul)
-                    {
-                        if (GetCombo(out var combo, dicesRolled, nbDicesUsedForRaises, raiseValue))
-                        {
-                            raiseFound = true;
-                            foreach (var die in combo)
-                            {
-                                dicesRolled.RemoveAt(dicesRolled.IndexOf(die));
-                            }
-                            nbRaises += raiseInitialValue == 15 ? 2 : 1;
-                            break;
-                        }
-                    }
+                    Debug.Log("NATURAL 10 FOUND");
+                    nbRaises++;
+                    continue;
                 }
-                if (!raiseFound)
+                if (dicesRolled.Contains(idealDice))
                 {
-                    nbDicesUsedForRaises++;
+                    Debug.Log("BEST PAIR FOUND WITH " + maxDice + " AND " + idealDice);
+                    dicesRolled.Remove(idealDice);
+                    nbRaises += raiseInitialValue == 15 ? 2 : 1;
+                    continue;
+                }
+
+                temp.Add(maxDice);
+                /*
+                string newNewS = "";
+                foreach (var item in soloDices)
+                    newNewS += item.ToString() + " ";
+                Debug.Log("SOLO DICES : " + newNewS);
+                */
+            }
+            dicesRolled.AddRange(temp);
+            dicesRolled.Sort();
+            dicesRolled.Reverse();
+            /*
+            string leftoverS = "";
+            foreach (var item in dicesRolled)
+                leftoverS += item.ToString() + " ";
+            Debug.Log(" LEFT OVER DICES : " + leftoverS);
+            Debug.Log(" ================================================ GOING TO COMBOS ");
+            */
+            while (dicesRolled.Sum() >= raiseInitialValue)
+            {
+                for (int raiseValue = raiseInitialValue; raiseValue < 22; raiseValue++)
+                {
+                    GetCombo(out var combo, dicesRolled, raiseValue);
+                    if (combo.Count > 0)
+                    {
+                        string comboS = "";
+                        foreach (var item in combo)
+                            comboS += item.ToString() + " ";
+                        Debug.Log("COMBO FOUND WITH : " + comboS);
+                        foreach (var die in combo)
+                            dicesRolled.RemoveAt(dicesRolled.IndexOf(die));
+                        nbRaises += raiseInitialValue == 15 ? 2 : 1;
+                        break;
+                    }
                 }
             }
             raiseInitialValue -= 5;
         }
+        /*
+        Debug.Log(" ================================================ ");
         Debug.Log("TOTAL OF RAISES : " + nbRaises);
         Debug.Log("REMAINING DICES : " + LookDices(dicesRolled));
+        Debug.Log(" ================================================ ");
+        */
         DisplayRaises();
     }
 
-    private static void SeparateIntoHalf()
+    private static void GetCombo(out List<int> combo, List<int> dicesList, int raiseValue)
     {
-        for (int i = 0; i < dicesRolled.Count; i++)
-        {
-            if (i < dicesRolled.Count / 2)
-            {
-                firstHalfRolled.Add(dicesRolled[i]);
-            }
-            else
-            {
-                secondHalfRolled.Add(dicesRolled[i]);
-            }
-        }
-    }
-
-    private static void MergeIntoOne()
-    {
-        dicesRolled.Clear();
-        foreach (var item in firstHalfRolled)
-        {
-            dicesRolled.Add(item);
-        }
-        foreach (var item in secondHalfRolled)
-        {
-            dicesRolled.Add(item);
-        }
-    }
-
-    static readonly int limit = 100000;
-
-    private static bool GetCombo(out List<int> combo, List<int> dicesList, int setSize, int raiseValue)
-    {
-        int countOfOperations = 0;
-        if (setSize > dicesList.Count)
-        {
-            combo = new();
-            return false;
-        }
-
         for (int i = 1; i < (int)Math.Pow(2, dicesList.Count); i++)
         {
             combo = new();
             for (int j = 0; j < dicesList.Count; j++)
             {
                 if ((i >> j) % 2 != 0)
-                {
                     combo.Add(dicesList[j]);
-                    countOfOperations++;
-                }
-                if (combo.Count == setSize)
-                {
-                    if (combo.Sum() == raiseValue)
-                    {
-                        return true;
-                    }
+                int sum = combo.Sum();
+                if (sum == raiseValue)
+                    return;
+                if (sum > raiseValue)
                     break;
-                }
-            }
-            if (countOfOperations == limit)
-            {
-                combo = new();
-                return false;
             }
         }
         combo = new();
-        return false;
     }
-
-    /*
-    private static List<List<int>> GetCombination(List<int> intList, int setSize, int raiseValue)
-    {
-        if (setSize > intList.Count)
-        {
-            return new();
-        }
-        List<List<int>> combos = new();
-        for (int i = 1; i < (int)Math.Pow(2, intList.Count); i++)
-        {
-            combos.Add(new List<int>());
-            for (int j = 0; j < intList.Count; j++)
-            {
-                if ((i >> j) % 2 != 0)
-                {
-                    combos[^1].Add(intList[j]);
-                }
-            }
-        }
-        Debug.Log("NUMBER OF ELEMENT IN COMBOS : " + combos.Count);
-        //return combos.Where(c => c.Count == setSize).ToList();
-        return new();
-    }
-    */
-
 
     private static string LookDices(List<int> diceList)
     {
